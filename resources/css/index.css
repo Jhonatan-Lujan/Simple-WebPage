@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-family: monospace;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
+
+h2,
+h3,
+h4,
+figcaption {
+    text-align: center;
+}
+
+header {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid seashell;
+    height: 69px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    margin: 0 auto;
+    background-color: black;
+}
+
+header img {
+    height: 50px;
+    width: auto;
+    padding-left: 10px;
+}
+
+.menuSPhone {
+    display: none;
+}
+
+.menuSPhone div {
+    width: 25px;
+    height: 3px;
+    background-color: seashell;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+nav {
+    text-align: right;
+    flex-grow: 1;
+}
+
+nav a {
+    text-decoration: underline;
+    color: seashell;
+    padding: 20px 10px;
+}
+
+nav span {
+    padding: 10px;
+}
+
+nav span:hover {
+    background-color: dimgray;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: white;
+}
+
+.bussiness {
+    min-height: 1000px;
+    width: 1200px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission {
+    display: flex;
+    padding-top: 69px;
+    height: 700px;
+    width: 100%;
+    background-image: url(/resources/images/img-mission-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner {
+    background-color: black;
+    width: 100%;
+    height: fit-content;
+    margin: 20px;
+    padding: 40px;
+    display: flex-block;
+    transition: transform 0.7s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.mission:hover .banner {
+    transition: transform 0.7s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.monthTea {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.monthTeaText {
+    background-color: dimgray;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.sweeties {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    margin: 20px 10px;
+}
+
+.sweetie {
+    position: relative;
+    display: flex;
+    margin: 20px;
+    transition: 0.2s;
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+    background-color: dimgray;
+}
+
+.sweetie:hover {
+    width: 300px;
+    height: 250px;
+}
+
+.sweetie figure img {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
+
+.sweetie:hover figure img {
+    opacity: 1;
+}
+
+.sweetie figure figcaption {
+    color: white;
+    display: none;
+}
+
+.sweetie:hover figure figcaption {
+    display: block;
+}
+
+.spot {
+    display: block;
+    width: auto;
+    height: auto;
+    background-image: url("/resources/images/img-locations-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+}
+
+.location {
+    margin: 20px 0px;
+    max-width: 300px;
+    height: auto;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.locationsText {
+    width: fit-content;
+    padding: 20px 10px;
+    margin: auto;
+    background-color: dimgray;
+    opacity: 0.8;
+}
+
+.locations {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 40px;
+    line-height: 3;
+    text-align: center;
+    font-size: larger;
+    flex-wrap: wrap;
+    
+}
+
+.contact {
+    background-color: black;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid seashell
+}
+
+.contact address {
+    line-height: 1.75;
+    text-align: center;
+    width: fit-content;
+}
+
+.contact span {
+
+    align-self: flex-start;
+    padding: 20px 10px;
+
+}
+
+
+@media only screen and (max-width: 720px),
+(orientation: portrait) {
+    body{
+        overflow-x: hidden;
+    }
+    .navLinks {
+        position: absolute;
+        right: 0px;
+        height: auto;
+        top: 69px;
+        display: flex;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+
+    .navLinks span{
+        padding: 25px 0px;
+        opacity: 0;
+    }  
+
+    .menuSPhone {
+        display: block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+}
+
+
+.navActive{
+    transform: translateX(0%);
+}
+
+@keyframes navLinksFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
